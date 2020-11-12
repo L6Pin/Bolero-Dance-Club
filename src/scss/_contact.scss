@@ -1,0 +1,184 @@
+.contact{
+     
+    text-align: center;
+
+    & h3{
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+        color: white;
+    }
+
+    &__socialIcons{
+        margin: 0 auto;
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+        color: $pink;
+    }
+
+    &__info{
+        background: $dark_purple;
+
+       & a{
+            color: $pink;
+        }
+
+        & p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            & span {
+                font-size: 1.125rem;
+                display: block;
+                font-weight: initial;
+                color: $pink;
+            }
+            margin-bottom: .8rem;
+        }
+
+    }
+
+    .mapMobile{
+        width: 100%;
+    }
+
+    .mapDesktop{
+        display: none;
+    }
+
+    &__workHours{
+         & h3{
+            color: $dark_purple;
+            margin-bottom: 3.125rem;
+        }
+
+        .hours{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .noHours{
+            color: red;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .contact{
+
+        &__socialIcons{
+            & .fa-2x{
+                font-size: 3rem;
+            }
+        }
+
+        &__workHours{
+            p{
+                font-size: 1.3rem;
+            }
+        }
+       
+    }
+}
+
+@media (min-width: 1024px){
+    .contact{
+        width: 100%;
+        height: 100%;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+    
+        & h3{
+            font-size: 2.2vw;
+            margin-bottom: 1.5vw;
+        }
+    
+        &__socialIcons{
+            margin: 0;
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5vw;
+            margin-bottom: 1vw;
+            color: $pink;
+          
+        }
+
+        &__left{
+            padding: 0;
+        }
+    
+        &__info{
+            background: $dark_purple;
+            display: flex;
+            padding: 1vw;
+
+            & p {
+                font-size: 1.6vw;
+                & span {
+                    font-size: 1.125vw;
+                }
+                margin-bottom: .8vw;
+            }
+        }
+
+        &__left, &__right{
+            width: 50%;
+        }
+
+
+        &__map{
+            width: 50%;
+            background-image: url('../img/boleroMap.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    
+        .mapMobile{
+            display: none;
+        }
+
+        .mapDesktop{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+    
+        &__workHours{
+            // height: 100%;
+            padding: 1vw;
+            background: white;
+             & h3{
+                color: $dark_purple;
+                margin-bottom: 1.5vw;
+            }
+    
+            .hours{
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 1vw;
+                width: 40%;
+                
+                & p{
+                    font-size: .8vw;
+                }
+            }
+    
+            .noHours{
+                color: red;
+            }
+        }
+
+        &__mobileContainer{
+            width: 50%;
+        }
+        
+       
+    }
+}

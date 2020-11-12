@@ -1,0 +1,64 @@
+.instructors{
+    text-align: center;
+
+    &__title{
+        font-size: 2rem;
+        font-weight: bold;
+        color: #39375B;
+        letter-spacing: 0.2em;
+        line-height: 40px;
+        margin-bottom: 1rem;
+    }
+
+    &__subtitle{
+        font-size: 1.125rem;
+        margin-bottom: 3.125rem;
+    }
+
+    &__desktopBg{
+        display: none;
+    }
+
+}
+
+@media (min-width: 768px){
+    .instructors{
+        &__cards{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .instructors{
+        position: relative;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+        text-align: left;
+
+        &__title {
+            font-size: 4vw;
+            margin-bottom: 1.5vw;
+        }
+
+        &__subtitle{
+            font-size: 2vw;
+        }
+
+        &__cards{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+
+        &__desktopBg{
+            display: block;
+            position: absolute;
+            top: -2.5vw;
+            right: 3vw;
+            width: 30vw;
+        }
+    }
+}

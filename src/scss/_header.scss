@@ -1,0 +1,216 @@
+.header{
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    
+    h1{
+        display: none;
+    }
+    
+    
+    &__top{
+        height: 50vh;
+        background: url("../img/vaweHeader.png"), linear-gradient(90deg, #39375B 0%, rgba(57, 55, 91, 0) 99.45%);
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+
+        &__desktopContainer{
+            display: none;
+        }
+
+        & h2{
+            font-size: 1.125rem;
+            font-weight: normal;
+            color: $pink;
+        }
+
+        .cta, .ctaDesktop{
+            display: inline-block;
+            color: whitesmoke;
+            background: $light_purple;
+            padding: 10px 20px 10px 20px;
+        }
+
+        .ctaDesktop{
+            display: none;
+        }
+
+        .logo{
+            width: 7.25rem;
+            margin-bottom: 1.25rem;
+        }
+    }
+
+    &__bottom{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+        & img{
+            width: 95%;
+            position: relative;
+            z-index: 2;
+            transform: translate(6.5%, -10%);
+          
+           
+        }
+
+        .definition{
+            position: absolute;
+            top: 8vw;
+            left: 8vw;
+            
+            color: $gray;
+
+            &__title{
+                font-weight: bold;
+                font-size: 0.5875rem;
+                margin-bottom: .3rem;
+            }
+
+            &__text{
+                width: 20.5%;
+                font-size: 0.4925rem;
+            }
+        }
+    }
+
+}
+
+//Phone Landscape & Tablet Portrait
+@media(min-height: 812px){
+    .header__top{
+        background: url("../img/vaweHeaderTall.png"), linear-gradient(90deg, #39375B 0%, rgba(57, 55, 91, 0) 99.45%);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+//Phone Landscape & Tablet Portrait
+@media (min-width: 568px) {
+    .header{
+        height: auto;
+
+        &__top{
+            height: auto;
+
+            h2{
+                margin-bottom: 2.25rem;
+            }
+        }
+
+        &__bottom {
+            display: none;
+        }
+    }
+}
+
+
+@media (min-width: 1024px) {
+
+    
+    .rightDesktopColumn{
+        width: 45%;
+        display: flex;
+        align-items: center;
+    }
+
+
+    .header{
+        height: 100vh;
+        display: flex;
+        flex-direction: row-reverse;
+        position: relative;
+        z-index: 3;
+        
+        padding-top: 5vw;
+        background: url("../img/heroDesktopBg.png"), black;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        &__top{
+            height: 30vw;
+            width: 80%;
+            margin-bottom: 5vw;
+            border: .5vw solid #745C97;
+            background: none;
+            padding: 0;
+            background: rgba($color: #2a2944, $alpha: .6);
+            padding: 2vw;
+            margin-left: .8vw;
+
+            &__desktopContainer{
+                display: block;
+                
+            }
+            h2{
+                font-size: 1.3vw;
+                margin-bottom: 0px;
+                font-weight: 100;
+            }
+
+            & .logo {
+                width: 15vw;
+            }
+
+            .cta {
+                display: none;
+            }
+
+            .ctaDesktop{
+                display: inline-block;
+                margin-top: 2vw;
+                font-size: 1.5vw;
+          
+
+            }
+        }
+
+        &__bottom {
+            
+            display: flex;
+            justify-content: center;
+            width: 55%;
+            
+            & img{
+                width:45vw;
+                transform: translateY(1vw);
+            }
+
+            .definition{
+                
+                
+                top: initial;
+                left: 50%;
+                bottom: 5%;
+
+                &__title{
+                    font-size: .6vw;
+                }
+
+                &__text{
+                    font-size: .5vw;
+                    width: 100%;
+                }
+            }
+   
+        }
+    }
+}
+
+@media (min-width: 1366px){
+    .header{
+        &__bottom{
+            & img {
+                width: 31vw;
+            }
+        }
+    }
+}
+
+
