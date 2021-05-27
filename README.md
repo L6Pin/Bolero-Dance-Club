@@ -1,4 +1,5 @@
-<h1>Bolero Dance Club</h1>
+
+<a href="http://fortesting.rf.gd/"><h1>Bolero Dance Club</h1></a>
 <h2>Project Overview</h2>
 <p>The project represents a website created for the <a href="https://www.facebook.com/pkbolero/">Bolero Dance Club</a>. The website was not done for commision and was just used for practise. The club itself just served as a theme.</p>
 <br/>
